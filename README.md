@@ -8,11 +8,8 @@ Make sure the .kobo/screensaver/ directory exists, the script doesn't have error
 ## Install
 copy the wallpaper-snip/ folder into .adds/ and add the following to your config (or copy the move_wp file into .adds/nm/)
 ```
-menu_item   :main :Screenshot > Wallpaper : cmd_output :500  :quiet :test -e /mnt/onboard/screen_*.png
-      chain_failure     : skip : 2
-      chain_success     : cmd_spawn       : quiet : exec /mnt/onboard/.adds/wallpaper-snip/wp_snip.sh
-      chain_always      : skip : -1
-      chain_failure     : dbg_toast       : Copy screenshot failed. Make sure you have a screensaver folder or there's a screenshot
+menu_item   :main :Screenshot > Wallpaper : cmd_output :500 : exec /mnt/onboard/.adds/wallpaper-snip/wp_snip.sh
+
 ```
 
 ## Usage

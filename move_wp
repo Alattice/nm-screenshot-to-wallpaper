@@ -1,0 +1,5 @@
+menu_item   :main :Screenshot > Wallpaper : cmd_output :500  :quiet :test -e /mnt/onboard/screen_*.png
+      chain_failure     : skip : 2
+      chain_success     : cmd_spawn       : quiet : exec /mnt/onboard/.adds/wallpaper-snip/wp_snip.sh
+      chain_always      : skip : -1
+      chain_failure     : dbg_toast       : Copy screenshot failed. Make sure you have a screensaver folder or there's a screenshot
